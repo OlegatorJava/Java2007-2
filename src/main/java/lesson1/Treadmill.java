@@ -10,7 +10,6 @@ public class Treadmill extends Lat{
     }
 
     boolean overcome(Motionable name) {
-
     if (Objects.equals(name.run(length), "не смог")){
         System.out.println(name.getName() + " не осилил дистанцию");
         return false;
