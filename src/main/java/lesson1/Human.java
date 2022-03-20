@@ -2,11 +2,13 @@ package lesson1;
 
 public class Human implements Runable, Jumpable {
     private final String name;
-    private final int maxLength = 100; // 100 м
-    private final int maxJump = 20; //20 см
+    private final int maxLength ; // 100 м
+    private final int maxJump; //20 см
 
 
-    public Human(String name) {
+    public Human(String name, int maxJump, int maxLength) {
+        this.maxLength = maxLength;
+        this.maxJump = maxJump;
         this.name = name;
     }
 

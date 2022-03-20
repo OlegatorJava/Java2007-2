@@ -2,8 +2,8 @@ package lesson1;
 
 public class Robot implements Runable, Jumpable{
     private final String name;
-    private final int maxLength = 500; // 500 м
-    private final int maxJump = 200; //200 см
+    private final int maxLength; // 500 м
+    private final int maxJump; //200 см
 
 
     public int getMaxLength() {
@@ -14,7 +14,9 @@ public class Robot implements Runable, Jumpable{
         return maxJump;
     }
 
-    public Robot(String name) {
+    public Robot(String name, int maxJump, int maxLength) {
+        this.maxLength = maxLength;
+        this.maxJump = maxJump;
         this.name = name;
     }
 

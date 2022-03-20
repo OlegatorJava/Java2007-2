@@ -2,13 +2,15 @@ package lesson1;
 
 public class Cat implements Runable, Jumpable{
     private final String name;
-    private final int maxLength = 45; // 45 м
-    private final int maxJump = 100; //100 см
+    private final int maxLength; // 45 м
+    private final int maxJump; //100 см
 
 
     /** Конструктор**/
 
-    public Cat(String name) {
+    public Cat(String name, int maxJump, int maxLength) {
+        this.maxLength = maxLength;
+        this.maxJump = maxJump;
         this.name = name;
     }
 

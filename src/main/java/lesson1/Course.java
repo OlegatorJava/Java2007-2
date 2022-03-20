@@ -13,12 +13,13 @@ public class Course {
 
     public void doIt(Team team){
         for (int i = 0; i < team.getArrayMotions().length; i++) {
-            for (int j = 0; j < arrayLat.length; j++) {
-                if(arrayLat[j].overcome(team.getArrayMotions()[i]) == false){
-                    i++;
-                    j = -1;    // самому смешно на решение, но работает и даже универсально(если препятствий 85)
-                }
-            }
+            for (int j = 0; j < arrayLat.length; j++)
+                if (arrayLat[j].overcome(team.getArrayMotions()[i]) == false) {
+                    if(i != (team.getArrayMotions().length - 1)) {
+                        i++;
+                        j = -1;    // самому смешно на решение, но работает и даже универсально(если препятствий 85)
+                    }
+                    }
         }
     }
 
